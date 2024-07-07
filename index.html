@@ -7,10 +7,18 @@
         form.table{
             display: table;
         }
+        div.table{
+            display: table-row;
+        }
+        input,label{
+            display: table-cell;
+        }
     </style>
 </head>
 <body>
-    <form action="/send" method="post">
+    <form class="table"
+     action="/send" 
+    method="post">
         
         <div class="table">
             <label for="d_name">
