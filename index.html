@@ -72,6 +72,19 @@
     </form>
     
     <script>
+        if(
+        'serviceWorker' in 
+        navigator
+        ){
+         navigator
+         .serviceWorker
+         .register(
+         'app.js',
+         {
+         scope :'/'
+         })  
+        }
+        
         const form = document
         .querySelector("form");
 
@@ -91,7 +104,7 @@
                 }
             });
 
-            });
+        });
 
         
     </script>
