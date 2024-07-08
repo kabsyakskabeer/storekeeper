@@ -17,9 +17,7 @@
     </style>
 </head>
 <body>
-    <form class="table"
-     action="/send" 
-    method="post">
+    <form class="table">
         
         <div class="table">
             <label for="d_name">
@@ -55,7 +53,7 @@
             <div class="b_t">
 
             <input 
-            type="button" 
+            type="submit" 
             value="load">
 
             <input 
@@ -67,11 +65,35 @@
             value="Next">
 
             </div>
+            
 
         </div>
         
     </form>
     
-    
+    <script>
+        const form = document
+        .querySelector("form");
+
+        form.addEventListener(
+            'submit',(e)=>{
+            e.preventDefault();
+
+            const formData = new
+            FormData(form);
+
+            fetch('/app',{
+                method:'POST',
+                body: formData,
+                headers: {
+                'Content-Type':
+                'multipart/form-data'
+                }
+            });
+
+            });
+
+        
+    </script>
 </body>
 </html>
