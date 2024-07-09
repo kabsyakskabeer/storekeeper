@@ -25,9 +25,15 @@ self.addEventListener
          const d_price =
          formData
          .get('d_price');
+         console.log(d_price);
 
          event.respondWith
-         ('form Data received')
+         (
+            new Response
+            (
+                d_name
+            )
+         )
 
 
         }  
