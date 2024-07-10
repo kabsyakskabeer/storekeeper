@@ -13,6 +13,7 @@ self.addEventListener
         {
          const formData = 
          event.request.body;
+         console.log('happy man');
 
 
          event.respondWith
