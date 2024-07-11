@@ -54,7 +54,7 @@
         <div class="table2">
             <div class="b_t">
 
-            <input 
+            <input class="submit" 
             type="submit" 
             value="load">
 
@@ -62,7 +62,7 @@
             type="button" 
             value="update">
 
-            <input
+            <input class="next"
             type="button"
             value="Next">
 
@@ -107,34 +107,30 @@
         } else if (registration.active) {
         // console.log('Service worker active');
         }
-                             } catch (error) {
-                                                                                                                          console.error(`Registration failed with ${error}`);
-                                                                                                                              }
-                                                                                                                                }
-                                                                                                                                };
-                                                                                                                                registerServiceWorker();
-    
+        } catch (error) {
+        console.error(`Registration failed with ${error}`);
+         }
+      }
+   };
+     registerServiceWorker();
 
-        const form = document
-        .querySelector("form");
+ const  submit = document
+ .querySelector(".submit");
+ submit.addEventListener
+ ( 
+ 'click',function(){
+    navigator
+    .serviceWorker
+    .controller(
+        {name:"kabiru"}
+    )
 
-        form.addEventListener(
-            'submit',(e)=>{
-            e.preventDefault();
+ }
+ 
+ );
 
-            const formData = new
-            FormData(form);
 
-            fetch('/app',{
-                method:'POST',
-                body: formData,
-                headers: {
-                'Content-Type':
-                'multipart/form-data'
-                }
-            });
-
-        });
+                                                                                                                            
 
         
     </script>
