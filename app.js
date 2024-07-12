@@ -6,5 +6,6 @@ self.addEventListener
     .data;
     console.log
     (myData.name);
+    console.log('kabeer');
  }
 );
