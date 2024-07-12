@@ -2,7 +2,9 @@ self.addEventListener
 (
  'message',
   function (event) {
+    let myData = event
+    .data;
     console.log
-    (event.data.name);
+    (myData.name);
  }
 );
