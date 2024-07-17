@@ -107,7 +107,7 @@
          console
          .log('Service worker installed');
         } else if (registration.active) {
-         console.log('Service worker active');
+       //  console.log('Service worker active');
         }
         } catch (error) {
         console
@@ -118,7 +118,7 @@
      registerServiceWorker();
 
  const  submit = document
- .querySelector(".submit");
+ .getElementsByClassName("submit");
  submit.addEventListener
  ( 
  'click',function(){
