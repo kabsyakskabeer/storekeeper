@@ -122,12 +122,12 @@
  submit.addEventListener
  ( 
  'click',function(){
-    this.navigator
+    navigator
     .serviceWorker
     .controller
     .postMessage(
         {name:"kabiru"}
-    )
+    );
 
  }
  
