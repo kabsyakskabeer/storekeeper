@@ -119,10 +119,11 @@
 
  const  submit = document
  .getElementsByClassName("submit");
- 
- submit.addEventListener
+
+ submit
+ .addEventListener
  ( 
- 'click',function(){
+ 'submit',function(){
     navigator
     .serviceWorker
     .controller
