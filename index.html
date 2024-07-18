@@ -106,22 +106,24 @@
    };
      registerServiceWorker();
 
+     function Drug(name,unit,price){
+        this.name = name;
+        this.unit = unit;
+        this.price = price;
+     }
+
  const  submit = document.
  getElementById('submit');
 
  let d_name = document
- .getElementById('d_name');
+ .getElementById('d_name').value
 
  let d_unit = document
- .getElementById('d_unit');
+ .getElementById('d_unit').value
 
  let d_price = document
- .getElementById('d_price');
+ .getElementById('d_price').value
 
- let drug = {};
- drug.name = d_name.value;
- drug.unit = d_unit.value;
- drug.price = d_price.value;
 
  submit
  .addEventListener
@@ -131,7 +133,7 @@
     .serviceWorker
     .controller
     .postMessage(
-       {name:'kqbru', school:'abu'}
+       new Drug(d_name,d_unit,d_price)
     );
 
  }
