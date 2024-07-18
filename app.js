@@ -2,8 +2,8 @@ self.addEventListener
 (
  'message',
   function (event) {
-    let myData = event.data;
-    console.log(myData);
+    let myDataa = event.data;
+    console.log(myDataa);
   
  }
 );
