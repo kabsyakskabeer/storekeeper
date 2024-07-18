@@ -110,7 +110,7 @@
  getElementById('submit');
 
  let d_name = document
- .getElementById('d_name').value;
+ .getElementById('d_name');
 
  let d_unit = document
  .getElementById('d_unit').value;
@@ -119,7 +119,7 @@
  .getElementById('d_price').value;
 
  let drug = 
- {name:d_name, unit : d_unit, price : d_price}
+ {name:d_name.value, unit : d_unit, price : d_price}
 
  submit
  .addEventListener
