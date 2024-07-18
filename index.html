@@ -45,19 +45,17 @@
         <div class="table2">
             <div class="b_t">
 
-            <input class="submit" id="submit"
+            <input class="submit"
+             id="submit"
             type="button" 
             value="load">
 
             <input 
             type="button" 
+            id="cancel"
             value="update">
 
-            <input class="next"
-            type="button"
-            value="Next">
-
-            </div>
+          </div>
             
 
         </div>
@@ -111,6 +109,18 @@
  const  submit = document.
  getElementById('submit');
 
+ let d_name = document
+ .getElementById('d_name').value;
+
+ let d_unit = document
+ .getElementById('d_unit').value;
+
+ let d_price = document
+ .getElementById('d_price').value;
+
+ let drug = 
+ {name:d_name, unit : d_unit, price : d_price}
+
  submit
  .addEventListener
  ( 
@@ -119,17 +129,12 @@
     .serviceWorker
     .controller
     .postMessage(
-        {name:"kabiru"}
+       drug 
     );
 
  }
  
- );
-
-
-                                                                                                                            
-
-        
+ );    
     </script>
 </body>
 </html>
