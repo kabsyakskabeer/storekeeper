@@ -113,13 +113,15 @@
  .getElementById('d_name');
 
  let d_unit = document
- .getElementById('d_unit').value;
+ .getElementById('d_unit');
 
  let d_price = document
- .getElementById('d_price').value;
+ .getElementById('d_price');
 
- let drug = 
- {name:d_name.value, unit : d_unit, price : d_price}
+ let drug = {};
+ drug.name = d_name.value;
+ drug.unit = d_unit.value;
+ drug.price = d_price.value;
 
  submit
  .addEventListener
