@@ -116,26 +116,27 @@
  getElementById('submit');
 
  const d_name = document
- .getElementById('d_name').value;
+ .getElementById('d_name');
 
  const d_unit = document
- .getElementById('d_unit').value;
+ .getElementById('d_unit');
 
  const d_price = document
- .getElementById('d_price').value;
+ .getElementById('d_price');
 
 
  submit
  .addEventListener
  ( 
  'click',function(e){
-    console.log('kabeer');
+    
     navigator
     .serviceWorker
    .controller
     .postMessage(
-       new Drug(d_name,d_unit,d_price)
+       new Drug(d_name.value ,d_unit.value ,d_price.value)
     );
+    console.log(new Drug('kelb'));
  }
  
  );    
